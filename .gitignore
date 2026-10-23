@@ -23,4 +23,6 @@ dist/
 
 # Captures for the store cards: reproducible by re-running the capture
 # script, and 1.5 MB of PNG that would otherwise sit in history forever.
+# The few the README shows are a separate, tracked set in
+# apps/*/art/screens/ — downscaled and not matched by the rule below.
 apps/*/art/shots/
