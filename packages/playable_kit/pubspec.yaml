@@ -1,0 +1,11 @@
+name: playable_kit
+description: Shared foundation for playable-style mini games — deterministic random, audio and music synthesis, a fixed-step clock, atomic saves. No Flutter, no dart:ui.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.13.0
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0

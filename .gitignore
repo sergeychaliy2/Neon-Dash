@@ -1,0 +1,26 @@
+# Build output. Neon Dash alone leaves 1.4 GB here, and every byte of it is
+# reproducible from the sources that are tracked.
+build/
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Machine-specific paths. `flutter build` writes these again on any machine,
+# which is exactly why they must not travel between machines.
+**/local.properties
+**/.idea/
+**/*.iml
+.vscode/
+
+# Finished artefacts handed to a person, not sources: release APKs and the
+# pictures sent for review. Several hundred megabytes, and none of it
+# belongs in history.
+dist/
+
+# Scratch left by build and measurement runs.
+*.log
+
+# Captures for the store cards: reproducible by re-running the capture
+# script, and 1.5 MB of PNG that would otherwise sit in history forever.
+apps/*/art/shots/

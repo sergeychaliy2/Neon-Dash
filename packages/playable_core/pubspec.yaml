@@ -1,0 +1,17 @@
+name: playable_core
+description: Pure Dart simulation and audio-synthesis core for playable-style mini games. No Flutter, no dart:ui.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.13.0
+
+dependencies:
+  # The generator, the synthesiser and the fixed-step clock: everything the
+  # second game in this repository turned out to need as well.
+  playable_kit:
+    path: ../playable_kit
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0

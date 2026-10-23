@@ -1,0 +1,9 @@
+# One line ending everywhere. Without this, Git rewrites every Dart file on
+# checkout under Windows and the first diff anyone sees is the whole tree.
+* text=auto eol=lf
+
+# Binary, so Git never tries to be clever with them.
+*.png binary
+*.webp binary
+*.ico binary
+*.apk binary

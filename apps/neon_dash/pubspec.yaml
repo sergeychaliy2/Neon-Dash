@@ -1,0 +1,42 @@
+name: neon_dash
+description: A neon dodge-and-weave mini game. Windows and Android.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.13.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Game logic and scoring. Pure Dart, no Flutter inside.
+  playable_core:
+    path: ../../packages/playable_core
+
+  # What this game shares with the next one: the generator whose sequence is
+  # a contract, the synthesiser, the fixed-step clock, the atomic save.
+  playable_kit:
+    path: ../../packages/playable_kit
+
+  # Low-latency game audio. Chosen over a general media player because cues
+  # overlap constantly and the engine bed has to loop without a seam; it also
+  # plays straight from an in-memory buffer, which is what the synthesiser
+  # produces. Playback sits behind an interface and degrades to silence if the
+  # engine cannot start, so audio can never take the game down with it.
+  flutter_soloud: ^3.3.1
+
+  # Where the save file goes. The one thing a game cannot work out for itself:
+  # the per-app writable directory is a platform question on every platform,
+  # and on Android it is only answerable through a channel call.
+  path_provider: ^2.1.6
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  # No assets, by design: every pixel is drawn and every sound is synthesised.
+  # Nothing to load means no splash wait and no decode cost on startup.
+  uses-material-design: false
