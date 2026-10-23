@@ -26,3 +26,9 @@ dist/
 # The few the README shows are a separate, tracked set in
 # apps/*/art/screens/ — downscaled and not matched by the rule below.
 apps/*/art/shots/
+
+# Релизные ключи подписи и локальные настройки
+*.jks
+*.keystore
+**/key.properties
+**/android/local.properties
